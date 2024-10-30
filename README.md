@@ -16,7 +16,15 @@
 
     c. output Path should be `SourceData/Script/`
 
-3. After clone / update the modification, run the rebuild script on the GUI console.
+3. After clone / update the modification, 
+    1. Make sure you navigated to `vivado_gen/` before open the `.xpr` file. Otherwise the vivado dynamic file will be generated on your root of repo directory
+
+    ```
+    cd vivado_gen/
+    vivado project_name.xpr
+    ```
+
+    2. This step seems not necessary to execute on GUI since the `.xpr` file already have the most updated config.
     ```
     source <path_to_your_script>.tcl
     ```
